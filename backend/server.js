@@ -7,9 +7,8 @@ const { Server } = require("socket.io");
 const { addUser, getUser, removeUser } = require("./utils/users");
 const { PeerServer } = require("peer");
 const peerServer = PeerServer({
-  host:"/",
-  port: process.env.PORT || 5001,
-  path: "/",
+  host:"vision-dashboard-t9l6.onrender.com",
+  port: process.env.PORT || 443,
   secure: true
 });
 
