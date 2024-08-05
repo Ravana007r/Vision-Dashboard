@@ -1,0 +1,24 @@
+.video-grid {
+    width: 250px;
+    background: rgba(255, 255, 255, 0.05); /* More transparent background */
+    border-radius: 10px; /* Rounded corners for a smooth look */
+    padding: 20px;
+    backdrop-filter: blur(15px); /* Increased blur for a more pronounced effect */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for definition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: slightly deeper shadow for added depth */
+    color: #fff; /* Ensures text is readable */
+}
+
+
+
+.video-grid video {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+p{
+    color: black;
+}
+
+

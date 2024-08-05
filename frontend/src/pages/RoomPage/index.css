@@ -1,0 +1,243 @@
+.canvas-box {
+  height: 500px;
+}
+.heading-style {
+  font-size: 2.5rem; /* Adjust size as needed */
+  font-weight: 700; /* Bold font weight */
+  color: #333; /* Dark color for the heading */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  letter-spacing: 1px; /* Slightly increased letter spacing */
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #ff004f, #e60073, #ff004f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.2rem; /* Adjust as needed */
+  font-weight: bold; /* Bold text */
+}
+
+.btn-custom {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  background: linear-gradient(135deg, #2575fc, #6a11cb); /* Gradient background */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-custom:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb); /* Inverted gradient on hover */
+  transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+.btn-custom:active {
+  background: linear-gradient(135deg, #2575fc, #6a11cb); /* Maintain gradient on click */
+  transform: scale(0.98); /* Slightly scale down on click */
+}
+
+
+.user-list-container {
+  width: 100%;
+  margin-top: 40px; /* Space from the top */
+  padding-top: 40px; /* Padding at the top */
+
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow-y: auto; /* Scroll if content overflows */
+}
+
+.user-item {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  background: #fff; /* White background for each user item */
+  font-size: 16px;
+  color: #333; /* Dark text color */
+  border: 1px solid #ddd; /* Light border */
+  text-align: center; /* Center align text */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.user-item:hover {
+  background: #b6fff9; /* Highlight background color on hover */
+  color: white; /* Change text color on hover */
+}
+
+.you-label {
+  font-weight: bold;
+  color: #ff5722; /* Distinct color for "You" label */
+}
+
+
+.btn-clear-canvas {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px; /* Rounded corners */
+  background: linear-gradient(135deg, #ff3a3a, #ff7a7a); /* Gradient background */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effects */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.btn-clear-canvas:hover {
+  background: linear-gradient(135deg, #ff7a7a, #ff3a3a); /* Inverted gradient on hover */
+  transform: scale(1.05); /* Slightly scale up on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
+.btn-clear-canvas:active {
+  background: linear-gradient(135deg, #ff3a3a, #ff7a7a); /* Maintain gradient on click */
+  transform: scale(0.98); /* Slightly scale down on click */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Decrease shadow on click */
+}
+
+
+/* Undo Button */
+.btn-undo {
+  height: 50px;
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  background: #007bff; /* Primary color */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s; /* Smooth transition */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-top: 8px; /* Space from the top */
+}
+
+.btn-undo:hover {
+  background: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly scale up on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
+.btn-undo:disabled {
+  background: #b0bec5; /* Disabled background color */
+  color: #fff;
+  cursor: not-allowed;
+  box-shadow: none; /* Remove shadow for disabled state */
+}
+
+/* Redo Button */
+.btn-redo {
+  height: 50px;
+  display: inline-block;
+  padding: 12px 24px;
+  border: 2px solid #007bff; /* Outline border */
+  border-radius: 8px; /* Rounded corners */
+  background: white; /* White background */
+  color: #007bff; /* Primary color text */
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, border-color 0.2s; /* Smooth transition */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-top: 8px; /* Space from the top */
+}
+
+.btn-redo:hover {
+  background: #007bff; /* Primary color on hover */
+  color: white; /* White text on hover */
+  border-color: #0056b3; /* Darker border color on hover */
+  transform: scale(1.05); /* Slightly scale up on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
+.btn-redo:disabled {
+  border-color: #b0bec5; /* Disabled border color */
+  color: #b0bec5; /* Disabled text color */
+  cursor: not-allowed;
+  box-shadow: none; /* Remove shadow for disabled state */
+}
+
+
+.color-picker-container {
+
+  padding: 15px;
+
+  max-width: 300px; /* Maximum width */
+}
+
+.color-picker-label {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333; /* Dark text color */
+}
+
+.color-picker-input {
+  width: 40px; /* Adjust the size of the color input */
+  height: 40px; /* Adjust the size of the color input */
+  border: none; /* Remove default border */
+  border-radius: 50%; /* Round the color input */
+  padding: 0;
+  cursor: pointer;
+  transition: box-shadow 0.2s; /* Smooth transition for focus effect */
+}
+
+.color-picker-input:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Add custom focus shadow */
+}
+
+.color-picker-input::-webkit-color-swatch {
+  border: none; /* Remove default border in WebKit browsers */
+}
+
+.color-picker-input::-webkit-color-swatch-wrapper {
+  padding: 0; /* Remove default padding in WebKit browsers */
+}
+
+
+
+
+.tool-selector {
+ 
+
+  padding: 10px;
+
+}
+
+.tool-option {
+  padding: 8px;
+  border-radius: 8px; /* Rounded corners for each option */
+  transition: background 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.tool-radio {
+  accent-color: #007bff; /* Primary color for the radio button */
+  width: 20px; /* Adjust the size */
+  height: 20px; /* Adjust the size */
+  cursor: pointer;
+}
+
+.tool-radio:checked {
+  background: #007bff; /* Primary color when checked */
+  border: 2px solid #007bff; /* Border color when checked */
+}
+
+
+.tool-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333; /* Dark text color */
+  cursor: pointer;
+}

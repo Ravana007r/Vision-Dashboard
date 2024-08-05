@@ -1,0 +1,6 @@
+.white {
+  border: 5px solid transparent; /* Set border width and make it transparent */
+  border-image: linear-gradient(to right, blue, red) 1; /* Define gradient direction and colors */
+  border-radius: 20px; /* Set border radius */
+  padding: 10px; /* Optional: adds space inside the border */
+}
