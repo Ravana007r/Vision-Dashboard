@@ -6,15 +6,14 @@ const { Server } = require("socket.io");
 
 const { addUser, getUser, removeUser } = require("./utils/users");
 
-// const { PeerServer } = require("peer");
+const peerServer = PeerServer({
+  host:"/",
+  port: 443,
+  path: "/",
+  secure: true
+});
 
-// const peerServer = PeerServer({
-//   host:"/".
-//   port: 5001,
-//   path: "/",
-// });
-
-// app.use(peerServer);
+app.use(peerServer);
 
 const io = new Server(server);
 // server.on("upgrade", (request, socket, head) => {});
