@@ -5,17 +5,17 @@ const server = require("http").createServer(app);
 const { Server } = require("socket.io");
 
 const { addUser, getUser, removeUser } = require("./utils/users");
-const { PeerServer } = require("peer");
-const peerServer = PeerServer({
-  host:"vision-dashboard-t9l6.onrender.com",
-  port: process.env.PORT || 443,
-  secure: true
-});
+// const { PeerServer } = require("peer");
+// const peerServer = PeerServer({
+//   host:"vision-dashboard-t9l6.onrender.com",
+//   port: process.env.PORT || 443,
+//   secure: true
+// });
 
-app.use(peerServer);
+// app.use(peerServer);
 
 const io = new Server(server);
-server.on("upgrade", (request, socket, head) => {});
+// server.on("upgrade", (request, socket, head) => {});
 
 // routes
 app.get("/", (req, res) => {
