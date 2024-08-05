@@ -16,7 +16,7 @@ const peerServer = PeerServer({
 app.use(peerServer);
 
 const io = new Server(server);
-// server.on("upgrade", (request, socket, head) => {});
+server.on("upgrade", (request, socket, head) => {});
 
 // routes
 app.get("/", (req, res) => {
