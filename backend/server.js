@@ -1,26 +1,37 @@
 const express = require("express");
+const fs = require("fs");
+const path = require("path");
+const https = require("https");
+const { Server } = require("socket.io");
+const { PeerServer } = require("peer");
+
+// Load SSL certificate and key
+const privateKey = fs.readFileSync(path.join(__dirname, 'path/to/your/private-key.pem'), 'utf8');
+const certificate = fs.readFileSync(path.join(__dirname, 'path/to/your/certificate.pem'), 'utf8');
+const ca = fs.readFileSync(path.join(__dirname, 'path/to/your/ca-certificate.pem'), 'utf8');
+
+const credentials = { key: privateKey, cert: certificate, ca: ca };
+
 const app = express();
 
-const server = require("http").createServer(app);
-const { Server } = require("socket.io");
+// Create an HTTPS server with the credentials
+const server = https.createServer(credentials, app);
 
-const { addUser, getUser, removeUser } = require("./utils/users");
-// const { PeerServer } = require("peer");
-// const peerServer = PeerServer({
-//   host:"vision-dashboard-t9l6.onrender.com",
-//   port: process.env.PORT || 443,
-//   secure: true
-// });
-
-// app.use(peerServer);
+// Initialize PeerJS server
+const peerServer = PeerServer({
+  port: 443, // Use the default port for HTTPS
+  path: '/peerjs',
+  secure: true, // Use HTTPS
+  ssl: credentials // Pass the SSL credentials
+});
+app.use('/peerjs', peerServer);
 
 const io = new Server(server);
-// server.on("upgrade", (request, socket, head) => {});
 
 // routes
 app.get("/", (req, res) => {
   res.send(
-    "This is mern realtime board sharing app official server by fullyworld web tutorials"
+    "This is the MERN realtime board sharing app official server by FullyWorld Web Tutorials"
   );
 });
 
@@ -84,5 +95,5 @@ io.on("connection", (socket) => {
 const port = process.env.PORT || 5000;
 
 server.listen(port, () =>
-  console.log("server is running on http://localhost:5000")
+  console.log(`Server is running on https://localhost:${port}`)
 );
